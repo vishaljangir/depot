@@ -10,6 +10,21 @@
   </head>
 
   <body>
+    <header class="main">
+      <%= image_tag('duck_logo.png', alt: 'THe Pragmatic Bookshelf') %> 
+    </header>
+    <section class="content">
+      <nav class="side_nav">
+        <ul>
+          <li><%= DateTime.now.strftime("%H:%M") %></li>
+          <li><%= DateTime.now.strftime("%d-%m-%y") %></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/questions">Questions</a></li>
+          <li><a href="/news">News</a></li>
+          <li><a href="/contact">contact</a></li>
+        </ul>
+      </nav>
+    </section>
     <main class="<%= controller.controller_name %>">
       <%= yield %>
     </main>

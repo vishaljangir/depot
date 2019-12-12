@@ -3,7 +3,7 @@ require 'test_helper'
 class ProductTest < ActiveSupport::TestCase
 
 	def setup
-		@product = Product.new(title: "seven wonders", 
+		@product = Product.new(title: "seven wond", 
 													 description: "New7Wonders of the World (2000–2007) was a 
 													 							 campaign started in 2000 to choose Wonders.",
 													 image_url: "animation.jpg",
@@ -39,7 +39,7 @@ class ProductTest < ActiveSupport::TestCase
 
 	end
 
-	def new_product(image_url: "animation.jpg", title: "seven wonders")
+	def new_product(image_url: "animation.jpg", title: "seven wond")
 		Product.new(title: title, 
 							 description: "New7Wonders of the World (2000–2007) was a 
 							 							 campaign started in 2000 to choose Wonders.",

@@ -1,12 +1,18 @@
 .products {
 	margin: 0;
 	padding: 0.5em;
+
+	min-width: 86%;
+    float: right;
+    margin-top: 11%;
+
 	a {
 		padding: 0.354 0.5em;
 		border-radius: 0.354em;
 	}
 	table {
 		border-collapse: collapse;
+		width: 100%;
 	}
 	td {
 		padding: 0.5em;

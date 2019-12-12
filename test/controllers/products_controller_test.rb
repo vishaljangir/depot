@@ -1,9 +1,9 @@
 require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
-  setup do
+  def setup
     @product = products(:one)
-    @title = "The Great Book #{rand(100)}"
+    @title = "The #{rand(100)}"
   end
 
   test "should get index" do
