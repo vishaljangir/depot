@@ -2,23 +2,31 @@
   <p id="notice"><%= notice %></p>
 <% end %>
 
-<h1>Your Pragmtic Catalog</h1>
+<h1 class="heading">Your Pragmtic Catalog</h1>
+<h3 style="float: right;">
+  <% if @count %> 
+    <%= pluralize(session[:counter], "Session Counter") %>
+  <% end %>
+</h3>
 
 <ul class="catalog">
   <% cache @products do %>
     <% @products.each do |product| %>
       <% cache product do %>
-      <li>
-        <%= image_tag(product.image_url, class: 'list_image', size: 200,) %> 
+        <li>
+        <%= link_to image_tag(product.image_url, class: 'list_image', size: 175,), line_items_path(product_id: product), remote: true, method: "post"  %> 
         <h2><%= product.title %></h2>
         <p>
           <%= sanitize(product.description) %>
         </p>
         <div class="price">
           <%= number_to_currency(product.price) %>
+          <%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %>
         </div>
       </li>
       <% end %>
     <% end %>
   <% end %>
 </ul>
+
+

@@ -1,0 +1,54 @@
+.carts {
+	max-width: 70%;
+	float: left;
+
+	position: static;
+    float: left;
+
+    margin-top: 11%;
+    margin-left: 19%;
+
+    table {
+    	border-collapse: collapse;
+    }
+    td {
+    	padding: 0.2em;
+    }
+    td.quantity {
+    	white-space: nowrap;
+    }
+    td.quantity::after {
+    	content: " *"
+    }
+    td.price {
+    	font-weight: bold;
+    	text-align: right;
+    }
+    tfoot {
+    	th, td.price {
+    		font-weight: bold;
+    		padding-top: 1em;
+    	}
+    	th {
+    		text-align: right;
+    	}
+    	td.price {
+    		border-top: solid thin;
+    	}
+    }
+    input[type="submit"] {
+    	background-color: #f4d321;
+	    border-radius: 0.343em;
+	    border: solid thin #441;
+	    color: black;
+	    font-size: 1em;
+        padding: 0.2em 0.354em;
+    }
+    input[type="submit"]:hover {
+    	background-color: #992;
+    }
+}
+
+input.empty_card {
+    float: left;
+}

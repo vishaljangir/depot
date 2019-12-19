@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+first:
+  product: two
+  cart: one
+
+second:
+  product: ruby
+  cart: one
+
+# third:
+#   product: ruby
+#   cart: one

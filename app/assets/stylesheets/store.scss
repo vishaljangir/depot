@@ -1,14 +1,11 @@
 .store {
-	max-width: 70%;
+	max-width: 75%;
 	float: left;
 
 	position: static;
     float: left;
-    /* top: 38%; */
-    /* z-index: 9999999; */
-    /* left: 13%; */
-    margin-top: 11%;
-    margin-left: 13%;
+    margin-top: 6%;
+    margin-left: 20%;
 
 	ul.catalog {
 		border-top: solid 0.230em;
@@ -33,6 +30,20 @@
 			}
 			.price {
 				font-size: 1.414em;
+			}
+			form, div {
+				display: inline;
+			}
+			input[type="submit"] {
+				background-color: #c8c6d63d;
+			    border-radius: 0.354em;
+			    border: solid thin #000000;
+			    color: #131010;
+			    font-size: 0.700em;
+			    padding: 0.354em 1em;
+			}
+			input[type="submit"]:hover {
+				background-color: #e2e2e238;
 			}
 		}
 	}

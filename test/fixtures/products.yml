@@ -4,10 +4,17 @@ one:
   title: Seven
   description: MyText
   image_url: animation.jpg
-  price: 99
+  price: 33.00
 
 two:
   title: MyString1
   description: MyText
   image_url: animation.jpg
   price: 9.99
+
+
+ruby:
+  title: ruby
+  description: ssss
+  image_url: animation.jpg
+  price: 93.00

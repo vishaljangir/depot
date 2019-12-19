@@ -1,0 +1,22 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Orders</h1>
+
+<table>
+  <tfoot>
+    <tr>
+      <td colspan="3">
+        <%= link_to 'New Order', new_order_path %>
+      </td>
+    </tr>
+  </tfoot>
+
+  <tbody>
+    <% @orders.each do |order| %>
+
+    <% end %>
+  </tbody>
+</table>
+  

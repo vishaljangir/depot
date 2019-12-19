@@ -7,8 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Product.delete_all
+User.delete_all
 5.times do |t|
-Product.create!(title: "seven Mobile #{t}",
+Product.create!(title: "seven Mo #{t}",
 				description: %{seven-mobile-apps-in-seven-weeks Jul 29, 
 								2016 - Over seven weeks you'll build seven 
 								different mobile apps using seven different 
@@ -21,3 +22,6 @@ Product.create!(title: "seven Mobile #{t}",
 				price: 26.00
 				)
 end
+
+
+User.create!( name: "demo", password: "123456", password_confirmation: "123456" )
