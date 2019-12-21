@@ -30,4 +30,48 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      home:     "Home"
+      orders:   "Orders"
+      products: "products"
+      users:    "Users"
+      logout:   "Logout"
+
+  store:
+    index:
+      title_html:   "Your Pragmtic Catalog"
+      add_html:     "Add to Card"
+
+  carts:
+    cart:
+      title:        "Your Cart"
+      empty:        "Empty cart"
+      checkout:        "Checkout"
+
+
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:         "Name"
+      address_html: "Address"
+      email:        "E-mail"
+      pay_type:     "Pay with"
+      pay_prompt_html:  "Select a payment method"
+      submit:           "Place Order"
+      pay_types:
+        check:          "Check"              
+        credit_card:    "Credit Card"
+        purchase_order: "Purchase Order"
+      check_pay_type:
+        routing_number: "Routing #"
+        account_number: "Account #"
+      credit_card_pay_type:
+        cc_number:  "CC #"
+        expiration_date: "Expiry"
+      purchase_order_pay_type:
+        po_number:  "PO #"
+
+  thanks: "Thank you for your order"
+

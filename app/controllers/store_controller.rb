@@ -6,7 +6,14 @@ class StoreController < ApplicationController
 	before_action :track_index, only: [:index]
   
   def index
-  	@products = Product.order(:title)
+    # debugger  
+    if params[:set_locale]
+      # debugger
+      redirect_to store_index_url(locale: params[:set_lcoale])
+    else
+      # debugger
+      @products = Product.order(:title)
+    end
   end
 
   private

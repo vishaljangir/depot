@@ -20,7 +20,7 @@ class OrderControllerTest < ActionDispatch::IntegrationTest
   																				pay_type: @order.pay_type }}
   	end
 
-  	assert_redirected_to store_index_path
+  	assert_redirected_to store_index_path(locale: 'en')
   end
 
 end

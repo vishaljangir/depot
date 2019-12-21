@@ -1,0 +1,75 @@
+es:
+
+
+  layouts:
+    application:
+      home:     "Casa"
+      orders:   "pedidos"
+      products: "productos"
+      users:    "los usuarios"
+      logout:   "cerrar sesión"
+      login:    "iniciar sesión"
+
+  store:
+    index:
+      title_html:   "Tu catálogo pragmático"
+      add_html:     "Añadir a la tarjeta"
+
+
+  carts:
+    cart:
+      title:        "Su carro"
+      empty:        "Carro vacio"
+      checkout:     "Revisa"
+
+  orders:
+    new:
+      legend:       "Por favor, introduzca sus datos"
+    form:
+      name:         "Nombre"
+      address_html: "Habla a"
+      email:        "E-mail"
+      pay_type:     "Pagar con"
+      pay_prompt_html:  "Selecciona un método de pago"
+      submit:           "Realizar pedido"
+      pay_types:
+        check:          "Cheque"              
+        credit_card:    "Tarjeta de crédito"
+        purchase_order: "Orden de compra"
+      check_pay_type:
+        routing_number: "Enrutamiento #"
+        account_number: "Cuenta #"
+      credit_card_pay_type:
+        cc_number:  "CC #"
+        expiration_date: "Expiración"
+      purchase_order_pay_type:
+        po_number:  "Software #"
+
+
+  activerecord:
+    errors:
+      messages:
+        inclusion:  "no est&aacute: incluido en la lista"
+        blank:      "no puedo quedar en blanco"
+
+    models:
+      order:      "pedido"
+      
+    attributes:
+      order:
+        address:  "Direcci&oacute;n"
+        name:     "Nombre"
+        email:    "E-mail"
+        pay_type: "Forma de pago"
+
+  errors:
+    template:
+      body:     "hay problemas con los siguientes campos"
+      header:
+        one:    "1 error ha impedido que este %{model} se quarde"
+        other:  "%{count} errores han impedido que este %{model} se quarde"
+    
+  thanks: "Gracias por su orden"
+
+
+

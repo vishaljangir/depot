@@ -7,19 +7,22 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
-
-  root 'store#index', as: 'store_index'
+  
   resources :line_items, only: [:create, :destroy] do
-  	member do
-	   patch :increase
-	   patch :decrease
-	end
+    patch :decrease, on: :member
   end
   resources :carts, only: [:show, :create, :destroy]
+
+  scope '(:locale)' do
+    
+    root 'store#index', as: 'store_index'
+
+    resources :orders, only: [:new, :create, :index]
+  end
+
   resources :products do
     get :who_bought, on: :member
   end
-  resources :orders, only: [:new, :create, :index]
 
   resources :users
   

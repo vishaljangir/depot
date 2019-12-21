@@ -7,10 +7,20 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale        = "<%= I18n.locale %>";
+    </script>
   </head>
 
   <body>
     <header class="main">
+      <aside>
+        <%= form_tag store_index_path, class: 'locale' do %>
+          <%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+          <%= submit_tag 'submit', id: "submit_locale_change" %>
+        <% end %>
+      </aside>
       <%= image_tag('duck_logo.png', alt: 'THe Pragmatic Bookshelf') %> 
     </header>
     <section class="content">
@@ -21,14 +31,14 @@
         <ul>
           <li><%= DateTime.now.strftime("%H:%M") %></li>
           <li><%= DateTime.now.strftime("%d-%m-%y") %></li>
-          <li><%= link_to 'Home', store_index_path %></li>
+          <li><%= link_to t('.home'), store_index_path %></li>
           <% if session[:user_id] %>
-            <li><%= link_to 'Orders', orders_path %></li>
-            <li><%= link_to 'Products', products_path %></li>
-            <li><%= link_to 'Users', users_path %></li>
-            <li><%= link_to 'Logout', logout_path, method: :delete %></li>
+            <li><%= link_to t('.orders'), orders_path %></li>
+            <li><%= link_to t('.products'), products_path %></li>
+            <li><%= link_to t('.users'), users_path %></li>
+            <li><%= link_to t('.logout'), logout_path, method: :delete %></li>
           <% else %>
-            <li><%= link_to 'Login', login_path %></li>
+            <li><%= link_to t('.login'), login_path %></li>
           <% end %>
         </ul>
       </nav>

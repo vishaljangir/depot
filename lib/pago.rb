@@ -9,7 +9,6 @@ class Pago
 				payment_details.fetch(:routing).to_s + "/" +
 				payment_details.fetch(:account).to_s
 		when :credit_card
-			debugger
 			Rails.logger.info "Processing credit_card: " +
 				payment_details.fetch(:cc_num).to_s + "/" +
 				payment_details.fetch(:expiration_month).to_s + "/" +
