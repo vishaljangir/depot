@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   scope '(:locale)' do
     
-    root 'store#index', as: 'store_index'
+    root 'store#index', as: 'store_index', via: :all
 
     resources :orders, only: [:new, :create, :index]
   end
